@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="aecd7688-3ef9-4c7f-9e97-c8d7249325f8" activeEnvironment="Default" name="REST Project 1" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="eae06cc6-7230-4884-a8b7-9072e916e6a1" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://192.168.56.103:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>http://192.168.56.103:8080</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Authorize" path="/FinalTestSystem/RestService/clientInfo" id="5cb47b17-50e4-4375-b9b0-3eb54066d0b5">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>password</con:name>
+          <con:value>151986</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>151986</con:default>
+          <con:path xsi:nil="true"/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>surname</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>firstname</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>secondname</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Clientinfo" id="e2fe2c8e-d5de-4724-9044-6cbe99461169" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html</con:mediaType>
+          <con:status>500 403</con:status>
+          <con:params/>
+          <con:element xmlns:xht="http://www.w3.org/1999/xhtml">xht:html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:request name="Clientinfo" id="3672dcd9-0fe9-4160-a81b-907f49999642" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="token" value="7d1d8f68-0313-4ee0-acb6-e341e1d43d1b" xmlns="http://eviware.com/soapui/config"/></con:setting>
+          </con:settings>
+          <con:encoding>UTF-8</con:encoding>
+          <con:endpoint>http://192.168.56.103:8080</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://192.168.56.103/FinalTestSystem/RestService/Authorize</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="secondname" value="Васильевич"/>
+            <con:entry key="firstname" value="Василий"/>
+            <con:entry key="surname" value="Абрамов"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>surname</con:entry>
+            <con:entry>firstname</con:entry>
+            <con:entry>secondname</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>
